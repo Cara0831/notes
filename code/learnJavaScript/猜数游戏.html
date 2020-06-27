@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数游戏</title>
+    <script>
+        // var temp;
+        // var num=Math.random()*10;
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 10);
+        while (true) {
+            var num = prompt('你猜？输入1~10之间的数：');
+            if (num == random) {
+                alert('你猜对了~');
+                break;
+            } else if (num < random) {
+                alert('你猜小了...');
+                // continue;
+            } else {
+                alert('你猜大了...');
+                // continue;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
