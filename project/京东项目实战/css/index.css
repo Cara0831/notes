@@ -1,0 +1,297 @@
+.grid {
+    height: 480px;
+    background-color: #fff;
+}
+
+.grid-col1 {
+    height: 100%;
+    width: 190px;
+    background-color: #6e6568;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    /* 给"/"的 */
+}
+
+.ad {
+    width: 250px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+
+.ad-r {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 1;
+    width: 0;
+    transition: all 0.8s;
+    height: 480px;
+    /* background: url(../images/ad-r.jpg); */
+}
+
+.ad:hover .ad-r {
+    width: 990px;
+}
+
+.grid-col1 a {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 3px;
+}
+
+.grid-col1 ul {
+    padding: 10px 0;
+}
+
+.grid-col1 li {
+    padding-left: 12px;
+    line-height: 26px;
+    /* 在不加hover属性时用padding和margin都可以，但是加了hover后
+    如果用margin会导致只有部分有hover的样式 */
+}
+
+.grid-col1 li:hover {
+    background-color: #9c9698;
+}
+
+.grid-col2 {
+    width: 790px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.grid-col2-b div {
+    /* float: left; */
+    margin-top: 10px;
+}
+
+
+/* 图片是和盒子的基线对齐，所以图片和上方盒子会有空白缝隙
+解决办法：
+        1、让img变成块级元素
+        2、使用vertical-align:top; */
+
+.grid-col2-t {
+    position: relative;
+}
+
+.grid-col2-t a {
+    display: block;
+}
+
+.grid-col2-t i {
+    font-size: 24px;
+}
+
+.arrow-l,
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    /* width: 30px;
+    height: 60px; */
+    transform: translateY(-50%);
+    /* 往上走自己盒子高度的一半 */
+    text-align: center;
+    line-height: 60px;
+    color: rgba(255, 255, 255, .6);
+    font-weight: normal;
+    /* background: rgba(0, 0, 0, .3); */
+}
+
+.arrow-r {
+    /* float: right; */
+    right: 0;
+}
+
+.circle {
+    width: 167px;
+    height: 20px;
+    background: rgba(255, 255, 255, .3);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.circle li {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.circle .current {
+    background-color: #f10215;
+}
+
+.grid-col3 {
+    height: 100%;
+    width: 190px;
+}
+
+.login {
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.login-t {
+    width: 95px;
+    height: 60px;
+    font-size: 12px;
+    white-space: nowrap;
+    /* 强制不换行,一行显示 */
+    overflow: hidden;
+    /* 溢出隐藏 */
+    text-overflow: ellipsis;
+    /* 超出部分显示省略号 */
+    color: #666;
+    padding-left: 60px;
+    /* 给padding值，把文字挤过来 */
+    line-height: 20px;
+    position: relative;
+}
+
+.login-t a {
+    color: #666;
+}
+
+.login-t a:hover {
+    color: #f10215;
+}
+
+.user-info {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border-radius: 50%;
+    overflow: hidden; */
+    /* 圆角给的是装图片的盒子，所以是裁切，溢出部分要隐藏 */
+    background: url(../images/sprite_userinfo@1x.png) no-repeat;
+}
+
+.user-info img {
+    width: 40px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.login-b a {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #f10215;
+    margin-right: 3px;
+    text-align: center;
+    line-height: 20px;
+    color: #f10215;
+}
+
+.login-b a:hover {
+    background-color: #f10215;
+    color: #fff;
+}
+
+.news {
+    height: 155px;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.news-t {
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-t a {
+    float: left;
+    height: 17px;
+    line-height: 17px;
+}
+
+.cuxiao {
+    width: 38px;
+    border-right: 1px solid #ccc;
+}
+
+.gg {
+    margin-left: 15px;
+}
+
+.news-t .more {
+    float: right;
+}
+
+
+/* .news-t div {
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+} */
+
+.news-b {
+    padding-top: 15px;
+}
+
+.news-b li {
+    height: 23px;
+    line-height: 23px;
+}
+
+.expend {
+    height: 209px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.expend ul {
+    width: 195px;
+}
+
+.expend li {
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+
+.expend li a {
+    display: block;
+    padding-top: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.expend li span {
+    font-size: 12px;
+    color: #333;
+}
+
+.expend li span:hover {
+    color: #f10215;
+}
+
+.expend li i {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+}

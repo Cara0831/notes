@@ -11,6 +11,10 @@
     float: right;
 }
 
+img {
+    vertical-align: top;
+}
+
 blockquote,
 body,
 button,
@@ -266,6 +270,10 @@ footer {
     background-color: #EAEAEA;
 }
 
+footer a {
+    color: #666;
+}
+
 .service {
     padding: 30px 0;
     border-bottom: 1px solid #DEDEDE;
@@ -306,4 +314,105 @@ footer {
 .service ul li p {
     font-weight: 700;
     margin-left: 82px;
+}
+
+.help {
+    height: 200px;
+    border-bottom: 1px solid #DEDEDE;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+.help dl {
+    width: 192px;
+    float: left;
+}
+
+.help dt,
+.coverage h5 {
+    height: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.help dd {
+    height: 22px;
+}
+
+.coverage {
+    width: 200px;
+    height: 150px;
+    background: url(../images/ico_footer.png) no-repeat;
+}
+
+.coverage h5 {
+    /* text-align: right; */
+    /* 右对齐 */
+    padding-left: 35px;
+}
+
+.coverage p {
+    line-height: 18px;
+    font-size: 12px;
+    color: #666;
+    width: 180px;
+}
+
+.coverage a {
+    display: block;
+    margin-top: 5px;
+    width: 180px;
+    text-align: right;
+}
+
+.copyright {
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+
+.copyright span {
+    margin: 0 10px;
+}
+
+.copyright a {
+    color: #666;
+}
+
+.copyright div {
+    margin-top: 20px;
+}
+
+.copyright div p {
+    line-height: 22px;
+}
+
+.foot-icon a {
+    display: inline-block;
+    width: 103px;
+    height: 33px;
+    margin: 20px 4px 0;
+    /* 行内块可以用 text-align:center 来实现居中 */
+    background: url(../images/ico_footer.png) no-repeat 0 -150px;
+}
+
+.foot-icon a:nth-child(2) {
+    background-position: -103px -150px;
+}
+
+.foot-icon a:nth-child(3) {
+    background-position: 0 -183px;
+}
+
+.foot-icon a:nth-child(4) {
+    background-position: -103px -183px;
+}
+
+.foot-icon a:nth-child(5) {
+    background-position: 0 -216px;
+}
+
+.foot-icon a:nth-child(6) {
+    background-position: -103px -216px;
 }
