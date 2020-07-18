@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插值表达式</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeMajor"> 我是一位{{major}}的程序员 {{ sayHello()}}
+        <a v-bind:href="address">百度</a>
+        <!-- {{sayHi()}} -->
+        <p v-once>{{link}}</p>
+        <input type="text" v-model="link">v-once测试
+        <br>
+        <span v-html="mylink"></span>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script> -->
+<script>
+    // Vue大写，属性彼此间和方法彼此间要加逗号
+    new Vue({
+        el: "#app",
+        data: {
+            major: "前端开发",
+            address: "http:www.baidu.com",
+            link: "http:www.taobao.com",
+            mylink: "<a href='https://www.bilibili.com/'>哔哩哔哩</a>"
+        },
+        methods: {
+            sayHello: function() {
+                return "hello vue";
+            },
+            changeMajor: function(event) {
+                console.log(event.target.value);
+            }
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{count}}
+        <button type="button" @click="addbtnfn">增加</button>
+        <button type="button" @click="relsbtnfn">减少</button>
+        <input type="text" v-model="mystep">
+        <p v-on:mousemove="mymo">
+            今天是周一... <br> {{x}} <br> {{y}}
+            <span @mousemove="mystopmo">停止鼠标移动的事件</span>
+        </p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            count: 0,
+            mystep: 1,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            addbtnfn: function() {
+                this.count += this.mystep;
+            },
+            relsbtnfn: function() {
+                this.count -= this.mystep;
+            },
+            mymo: function(event) {
+                this.x = event.pageX;
+                this.y = event.pageY;
+            },
+            mystopmo: function(event) {
+                event.stopPropagation();
+            }
+        }
+    })
+</script>
+
+</html>

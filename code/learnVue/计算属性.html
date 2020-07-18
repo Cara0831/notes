@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{title}}
+        <input type="text" v-model="title"> {{getCurrentTime()}} {{getCurrentTime1}}
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var v1 = new Vue({
+        el: "#app",
+        data: {
+            title: "hello vue"
+        },
+        methods: {
+            getCurrentTime: function() {
+                return new Date();
+            }
+        },
+        computed: {
+            getCurrentTime1: function() {
+                return new Date();
+            }
+        },
+        watch: {
+            title: function() {
+                console.log("title changed");
+            }
+        }
+    })
+</script>
+
+</html>
