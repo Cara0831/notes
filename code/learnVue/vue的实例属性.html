@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app1">
+
+    </div>
+    <div id="app2">
+        <button type="button" @click="showVueObject">点我</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var v1 = new Vue({
+        el: "#app1",
+        data: {
+            title: "vue title"
+        }
+    })
+    var v2 = new Vue({
+        el: "#app2",
+        methods: {
+            showVueObject: function() {
+                console.log(v1);
+            }
+        }
+    })
+</script>
+
+</html>

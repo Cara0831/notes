@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{title}}
+        <button type="button" @click="toUpCase">大写点我</button>
+    </div>
+    <div id="app1">
+        <button type="button" @click="changeOtherVueTitle">点我1</button>
+        <button type="button" @click="m1">调用v1中的方法</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var v1 = new Vue({
+        el: "#app",
+        data: {
+            title: "Hello vue"
+        },
+        methods: {
+            toUpCase: function() {
+                this.title = this.title.toUpperCase();
+            }
+        },
+        computed: {
+            toLowerCase: function() {
+                this.title = this.title.toLowerCase();
+            }
+        }
+    })
+    var v2 = new Vue({
+        el: "#app1",
+        methods: {
+            changeOtherVueTitle: function() {
+                v1.title = "hello,js";
+            },
+            m1: function() {
+                v1.toUpCase();
+            }
+        }
+    })
+</script>
+
+</html>
