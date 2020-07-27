@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01jQuery基础</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        window.onload = function(ev) {
+            //通过原生的js入口函数可以拿到DOM元素
+            var img = document.getElementsByTagName("img")[0];
+            console.log(img);
+            //通过原生js入口函数可以拿到DOM元素宽高
+            var width = window.getComputedStyle(img).width;
+            console.log(width);
+        }
+        $(document).ready(function() {
+            //通过jQuery的入口函数可以拿到DOM元素
+            alert("Hello World!");
+            var $img = $("img")[0];
+            console.log($img);
+            //通过jQuery的入口函数不可以拿到DOM元素宽高
+            var $width = $img.width();
+            console.log($width);
+        });
+    </script>
+</head>
+
+
+<body>
+    <img src="https://img.alicdn.com/imgextra/i2/48605967/O1CN014Pcgcp1twvwENAZKw_!!0-saturn_solar.jpg_220x220.jpg_.webp" alt="">
+</body>
+
+</html>

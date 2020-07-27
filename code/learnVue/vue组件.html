@@ -9,29 +9,34 @@
 
 <body>
     <div id="app1">
-
+        <model1></model1>
     </div>
     <div id="app2">
-        <button type="button" @click="showVueObject" ref="mybtn1">点我</button>
-        <button type="button" @click="showVueObject" ref="mybtn2">点我</button>
+
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+    Vue.component("model1", {
+        template: "<div>{{title}}<button type='button' @click='btnfn'>点我</button></div>",
+        methods: {
+            btnfn: function() {
+                alert("hhh");
+            }
+        },
+        data: function() {
+            return {
+                title: "hello vue"
+            }
+        }
+    })
     var v1 = new Vue({
         el: "#app1",
-        data: {
-            title: "vue title"
-        }
+
     })
     var v2 = new Vue({
         el: "#app2",
-        methods: {
-            showVueObject: function() {
-                console.log(v1);
-                this.$refs.mybtn1.innerHTML = "hello"
-            }
-        }
+
     })
 </script>
 
