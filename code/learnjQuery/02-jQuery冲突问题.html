@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery冲突问题,核心函数</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            alert("hello world");
+            var $box1 = $(".box1");
+            console.log($box1);
+            var $p = $("<p>我是段落</p>");
+            console.log($p);
+            $box1.append($p);
+            var span = document.getElementsByTagName("span")[0];
+            // console.log(span);
+            var $span = $(span);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div id="box2"></div>
+    <span>我是span</span>
+</body>
+
+</html>

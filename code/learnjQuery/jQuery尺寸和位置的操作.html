@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尺寸和位置的操作</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 50px solid #000;
+            margin-left: 50px;
+            position: relative;
+        }
+        
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        
+        .scroll {
+            width: 100px;
+            height: 200px;
+            border: 1px solid #000;
+            overflow: auto;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var btns = document.getElementsByTagName("button");
+            // btns[0].onclick = function() {
+            //     console.log($(".father").width());
+            // }
+            // btns[1].onclick = function() {
+            //     $(".father").width("500px");
+            //     // console.log($(".son").offset().left);
+            // }
+            btns[0].onclick = function() {
+                console.log($(".scroll").scrollTop);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <div class="father">
+        <div class="son"></div>
+    </div> -->
+
+    <div class="scroll">
+        我是div我是div我是div我是div我是div我是div我是div我是div我是div我是div我是div我是div 我是div我是div我是div我是div我是div我是div我是div
+    </div>
+    <button>获取</button>
+    <button>设置</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

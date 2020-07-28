@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prop方法</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            // $("span").eq(0).prop("demo", "it666");
+            // $("span").eq(1).prop("demo", "lng");
+            // $("span").prop("demo");
+            $("input").prop("checked"); //true/false
+            $("input").attr("checked"); //checked / undefined
+        });
+    </script>
+</head>
+
+<body>
+    <span class="span1" name="it666"></span>
+    <span class="span2" name="hello"></span>
+    <input type="checkbox" checked>
+</body>
+
+</html>
