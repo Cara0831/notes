@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对联广告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .left {
+            float: left;
+            position: fixed;
+            left: 0;
+            top: 200px;
+        }
+        
+        .right {
+            float: right;
+            position: fixed;
+            right: 0;
+            top: 200px;
+        }
+        
+        img {
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(window).scroll(function() {
+            //获取网页的偏移位
+            var offset = $("html,body").scrollTop();
+            console.log(offset);
+            if (offset >= 500) {
+                $("img").show(1000);
+            } else {
+                $("img").hide(1000);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <img src="images/left_ad.png" alt="" class="left">
+    <img src="images/right_ad.png" alt="" class="right">
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background: pink;
+        }
+        
+        .two {
+            background: skyblue;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            $("button").eq(0).click(function() {
+                // $(".one").animate({
+                //     width:500
+                // },1000,function(){
+                //     alert("jjjjjj");
+                // });
+                $(".one").animate({
+                    marginLeft: 500
+                }, 1000, function() {
+                    alert("jjjjjj");
+                });
+                $(".two").animate({
+                    marginLeft: 500
+                }, 1000, "linear", function() {
+                    alert("jjjjjj");
+                });
+            })
+            $("button").eq(1).click(function() {
+                $(".one").animate({
+                    width: "+=100"
+                }, 1000, function() {
+
+                });
+            })
+            $("button").eq(2).click(function() {
+                $(".one").animate({
+                    width: "hide"
+                }, 1000, function() {
+
+                });
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <button>操作属性</button>
+    <button>累加属性</button>
+    <button>关键字</button>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>
